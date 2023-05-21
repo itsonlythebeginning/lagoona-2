@@ -1,4 +1,4 @@
-Try it here: 
+Try it here: https://itsonlythebeginning.github.io/lagoona-2/
 
 Макет: https://www.figma.com/file/tjkkfkHDXlGscyVbS3emln/Lagoona?node-id=0%3A1
 
