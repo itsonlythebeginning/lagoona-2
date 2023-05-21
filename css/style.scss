@@ -1,0 +1,1461 @@
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller Regular'), local('MullerRegular'),
+  url('../fonts/MullerRegular.woff2') format('woff2'),
+  url('../fonts/MullerRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller Bold'), local('MullerBold'),
+  url('../fonts/MullerBold.woff2') format('woff2'),
+  url('../fonts/MullerBold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: local('Muller Medium'), local('MullerMedium'),
+  url('../fonts/MullerMedium.woff2') format('woff2'),
+  url('../fonts/MullerMedium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+$color-black-1: #000000;
+$color-black-2: #333333;
+$color-grey-1: #666666;
+$color-grey-2: #999999;
+$color-grey-3: #E9E9E9;
+$color-grey-4: #E5E5E5;
+$color-orange-1: #F0BF5F;
+$color-orange-2: #CC9933;
+$color-orange-3: #A47312;
+$color-white-1: #FFFFFF;
+
+input::-webkit-calendar-picker-indicator {
+  opacity: 1;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+html{
+  box-sizing: border-box;
+}
+*, *::before, *::after{
+  box-sizing: inherit;
+}
+body{
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  color: $color-black-1;
+  background: $color-grey-4;
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.sections-margin{
+  margin-bottom: 70px;
+}
+.sections-title{
+  font-size: 40px;
+  line-height: 40px;
+  color: $color-black-2;
+  margin-bottom: 20px;
+  padding-left: 40px;
+}
+
+.header{
+
+  &__close{
+    display: none;
+  }
+
+  &__burger{
+    width: 40px;
+    height: 28px;
+    position: relative;
+    display: none;
+  }
+
+  &__burger-line{
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+  }
+
+  &__burger-line_first{
+    top: 0;
+  }
+
+  &__burger-line_third{
+    bottom: 0;
+  }
+  &__burger-line_second{
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+
+  &__top{
+    padding: 30px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__logo{
+    margin-right: 40px;
+  }
+
+  &__phone{
+    display: inline-block;
+    text-decoration: none;
+    color: $color-grey-1;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 20px;
+    transition: all 0.3s ease;
+  }
+  &__phone:hover{
+    color: $color-orange-2;
+  }
+  &__phone:focus{
+    color: $color-orange-2;
+    border: 2px solid $color-orange-2;
+  }
+  &__phone:active{
+    color: $color-orange-3;
+  }
+
+  &__lk{
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 28px;
+    background: url("../img/svg/arrow-1.svg") no-repeat center left ;
+    color: $color-orange-2;
+    font-size: 16px;
+    line-height: 16px;
+    margin-left: auto;
+    transition: all 0.3s ease;
+  }
+  &__lk:hover{
+    color: $color-orange-1;
+    background: url("../img/svg/arrow-2.svg") no-repeat center left ;
+  }
+  &__lk:focus{
+    color: $color-orange-2;
+    border: 2px solid $color-orange-2;
+  }
+  &__lk:active{
+    color: $color-orange-3;
+  }
+
+  &__bottom{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 45px;
+    background: $color-white-1;
+    border-radius: 15px;
+  }
+
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__item{
+    margin-right: 45px;
+  }
+  &__item:last-child{
+    margin-right: 0px;
+  }
+  &__link{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-grey-1;
+    transition: all 0.3s ease;
+  }
+  &__link:hover, &__link:focus, &__link:active{
+    opacity: 0.7;
+  }
+
+  &__info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  &__info-link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 13px 20px;
+    border: 1px solid $color-orange-2;
+    border-radius: 10px;
+    color: $color-orange-2;
+    line-height: 16px;
+    transition: all 0.3s ease;
+    margin-right: 40px;
+  }
+
+  &__info-link:last-child{
+    margin-right: 0px;
+  }
+
+  &__info-link:hover,&__info-link:focus{
+    color: $color-white-1;
+    background: $color-orange-2;
+  }
+  &__info-link:active{
+    color: $color-white-1;
+    background: $color-orange-3;
+  }
+
+}
+
+.tours{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+
+
+  &__tour{
+    grid-column: span 1;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+  }
+  &__tour:hover &__pic {
+    scale: 1.05;
+  }
+  &__tour:focus &__pic {
+    scale: 1.05;
+  }
+  &__tour:active &__pic {
+    scale: 1.05;
+  }
+
+  &__info{
+    position: absolute;
+    left: 45px;
+    bottom: 40px;
+    z-index: 3;
+  }
+
+  &__tour-big{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
+  }
+
+  &__box{
+    position: relative;
+  }
+  &__box:before{
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%);
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  &__pic{
+    object-fit: cover;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  &__pic-small{
+    height: 258px;
+  }
+
+  &__pic-big{
+    height: 540px;
+  }
+
+  &__title{
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 40px;
+    color: $color-white-1;
+  }
+
+  &__title_with-margin{
+    margin-bottom: 15px;
+  }
+
+   &__title-big{
+    max-width: 300px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  &__subtitle{
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-white-1;
+    opacity: 0.8;
+    margin-bottom: 47px;
+  }
+
+  &__more{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-orange-1;
+    padding-right: 15px;
+    background: url("../img/svg/arrow-mini.svg") no-repeat center right;
+    transition: all 0.3s ease;
+  }
+  &__more:hover{
+    padding-right: 26px;
+  }
+  &__more:active{
+    color: $color-white-1;
+    padding-right: 15px;
+  }
+
+
+}
+
+
+.about__subtitle{
+  max-width: 888px;
+  line-height: 200%;
+  color: $color-black-1;
+}
+
+
+.services{
+
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 24px;
+
+  }
+
+  &__card{
+    grid-column: span 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: $color-white-1;
+    border-radius: 15px;
+
+  }
+
+  &__card-info{
+    width: 100%;
+    padding: 36px 45px 25px 45px;
+  }
+
+  &__card-link{
+    text-decoration: none;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: $color-orange-2;
+    padding-right: 15px;
+    transition: all 0.3s ease;
+    background: url("../img/svg/arrow-mini-2.svg") no-repeat center right;
+  }
+
+  &__card-link:hover{
+    color: $color-orange-1;
+    padding-right: 26px;
+    background: url("../img/svg/arrow-mini.svg") no-repeat center right;
+  }
+
+  &__card-link:active{
+    color: $color-orange-3;
+    padding-right: 15px;
+  }
+
+
+  &__card-text{
+    font-size: 16px;
+    line-height: 200%;
+    color: $color-black-1;
+    max-width: 402px;
+  }
+
+
+  &__card-pic{
+    height: 165px;
+    object-fit: cover;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  &__card-box{
+    overflow: hidden;
+  }
+
+  &__card-box:hover &__card-pic{
+    scale: 1.05;
+  }
+
+}
+
+
+.advantages{
+
+  &__cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 22px;
+    grid-row-gap: 22px;
+  }
+  &__card{
+    grid-column: span 1;
+    padding: 40px 42px 32px 45px;
+    background: $color-white-1;
+    border-radius: 15px;
+  }
+  &__card-box{
+    margin-bottom: 10px;
+  }
+  &__desc{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 200%;
+    color: $color-black-1;
+
+  }
+
+
+}
+
+
+
+.hotels{
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+
+
+  &__hotel{
+    grid-column: span 2;
+    position: relative;
+    border-radius: 15px;
+  }
+
+
+  &__info{
+    background: $color-white-1;
+    padding: 32px 45px 45px 45px;
+    border-radius: 0px 0px 15px 15px;
+  }
+
+  &__info-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+  }
+
+  &__info-price{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+
+  &__info-price-1{
+    color: $color-grey-2;
+    font-size: 16px;
+    line-height: 16px;
+    margin-right: 4px;
+  }
+  &__info-price-2{
+    color: $color-black-1;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 4px;
+  }
+  &__info-price-3{
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-black-1;
+  }
+
+  &__info-name{
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-black-1;
+    margin-bottom: 16px;
+  }
+
+  &__info-place{
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-grey-2;
+    margin-bottom: 20px;
+  }
+
+
+  &__info-link{
+    display: inline-block;
+    text-decoration: none;
+    padding: 14px 20px;
+    color: $color-orange-2;
+    border: 1px solid $color-orange-2;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+
+  &__info-link:hover, &__info-link:focus{
+    color: $color-white-1;
+    background: $color-orange-2;
+  }
+
+  &__info-link:active{
+    color: $color-white-1;
+    background: $color-orange-3;
+  }
+
+  &__pic{
+    transition: all 0.4s ease;
+    object-fit: cover;
+
+  }
+
+  &__pic_small{
+    height: 217px;
+  }
+
+  &__pic_big{
+    height: 440px;
+  }
+
+  &__box{
+    overflow: hidden;
+    border-radius: 15px 15px 0px 0px;
+  }
+  &__box-big{
+    border-radius: 15px;
+  }
+
+  &__box:hover &__pic{
+    scale: 1.05;
+  }
+
+
+  &__more{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 200%;
+    color: $color-white-1;
+    position: absolute;
+    left: 54px;
+    bottom: 27px;
+    padding-right: 15px;
+    background: url("../img/svg/arrow-mini-3.svg") no-repeat center right;
+
+  }
+
+
+}
+
+
+.want-tour{
+
+  &__wrapper{
+    padding: 45px;
+    background: $color-grey-3;
+    border-radius: 15px;
+    
+  }
+
+  &__title{
+    color: $color-black-1;
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+
+  }
+
+
+}
+
+.search-box{
+
+
+
+  background: $color-white-1;
+  border-radius: 15px;
+  padding: 32px 28px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__info{
+    margin-right: 41px;
+
+  }
+  &__info:last-child{
+    margin-right: 0px;
+  }
+
+  &__label{
+    font-size: 12px;
+    line-height: 12px;
+    color: $color-black-1;
+    padding-left: 3px;
+    margin-bottom: 15px;
+  }
+
+  &__input{
+    border: none;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-black-1;
+    font-family: 'Muller';
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  &__submit{
+    padding: 14px 30px;
+    color: $color-orange-2;
+    font-size: 16px;
+    line-height: 16px;
+    border: 1px solid $color-orange-2;
+    border-radius: 10px;
+    background: $color-white-1;
+    transition: all 0.4s ease;
+  }
+
+  &__submit:hover, &__submit:focus{
+    background: $color-orange-2;
+    color: $color-white-1;
+  }
+
+  &__submit:active{
+    background: $color-orange-3;
+    color: $color-white-1;
+  }
+
+}
+
+
+.contacts{
+
+  &-margin{
+    margin-bottom: 40px;
+  }
+
+  &__wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+    background: $color-white-1;
+    border-radius: 15px;
+
+  }
+
+  &__info{
+    width: 375px;
+    margin-right: 52px;
+  }
+  &__info-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 23px 0px;
+    border-bottom: 2px solid $color-grey-3;
+  }
+
+  &__info-box:nth-last-child(2){
+    margin-bottom: 45px;
+  }
+
+  &__info-box:first-child{
+    padding-top: 0;
+  }
+
+  &__info-mail{
+    color: $color-orange-2;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__info-phone{
+    color: $color-orange-2;
+    font-size: 16px;
+    line-height: 150%;
+  }
+  &__info-desc{
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-grey-2;
+  }
+  &__info-subtitle{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-black-1;
+    max-width: 229px;
+  }
+  &__info-title{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-black-1;
+  }
+
+
+  &__info-text{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 65%;
+  }
+
+  &__info-button{
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $color-orange-2;
+    padding: 28px;
+    border: 1px solid $color-orange-2;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+  }
+  &__info-button:hover{
+    color: $color-white-1;
+    background: $color-orange-2;
+  }
+  &__info-button:focus{
+    color: $color-white-1;
+    background: $color-orange-2;
+  }
+  &__info-button:active{
+    color: $color-white-1;
+    background: $color-orange-3;
+  }
+
+}
+
+.footer{
+
+  &__wrapper{
+    padding: 45px;
+    background: $color-black-2;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(../img/logo-footer.png);
+    background-repeat: no-repeat;
+    background-position: 75% 100%;
+
+  }
+
+
+  &-margin{
+    margin-bottom: 30px;
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__info-text{
+    max-width: 319px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 190%;
+    color: $color-white-1;
+    margin-bottom: 40px;
+  }
+
+  &__info-link{
+    display: inline-block;
+    text-decoration: none;
+    color: $color-orange-2;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: auto;
+  }
+
+  &__contacts{
+    margin: 0 auto;
+  }
+
+
+  &__contacts-address{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+    color: $color-white-1;
+    margin-bottom: 15px;
+  }
+
+  &__contacts-box{
+    margin-bottom: 15px;
+  }
+
+  &__contacts-phone{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: $color-orange-2;
+  }
+
+  &__icons{
+    margin-left: auto;
+  }
+
+
+  &__icons-icon{
+    margin-bottom: 20px;
+  }
+
+  &__icons-icon:last-child{
+    margin-bottom: 0px;
+  }
+
+}
+
+@media screen and (max-width: 1199px) {
+
+  .container{
+    max-width: 960px;
+  }
+
+  .header{
+
+    &__item {
+      margin-right: 25px;
+    }
+
+    &__info-link {
+      margin-right: 20px;
+    }
+
+  }
+
+  .advantages__card {
+    padding: 30px 32px 22px 35px;
+  }
+
+  .hotels{
+
+    &__info {
+      padding: 32px 35px 25px 35px;
+    }
+
+    &__pic_big {
+      height: 430px;
+    }
+
+    &__info-phone {
+      text-align: center;
+    }
+
+    &__info-subtitle {
+      text-align: center;
+    }
+
+    &_info-mail {
+      text-align: center;
+    }
+
+    &__info-desc {
+      text-align: center;
+    }
+
+    &__info-box {
+      align-items: center;
+    }
+
+
+
+  }
+
+  .search-box__info {
+    margin-right: 0px;
+  }
+
+
+}
+
+@media screen and (max-width: 991px) {
+
+  .container{
+    max-width: 720px;
+  }
+
+  .header{
+
+    &__info {
+      display: none;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      margin-right: 40px;
+    }
+
+  }
+
+  .tours{
+
+    &__tour {
+      grid-column: span 2;
+    }
+
+    &__tour-big {
+      grid-column: 0;
+      grid-row: 3/4;
+    }
+
+    &__pic {
+      width: 100%;
+      border-radius: 15px;
+      height: auto;
+    }
+
+  }
+
+  .about__subtitle {
+    max-width: 700px;
+    font-size: 20px;
+  }
+
+  .advantages__card {
+    grid-column: span 2;
+  }
+
+
+  .services{
+
+    &__card-link {
+      line-height: 150%;
+    }
+
+    &__card-info {
+      padding: 25px 41px 22px 43px;
+    }
+
+    &__card-info-box{
+      margin-bottom: 7px;
+    }
+
+    &__card-link {
+      display: inline;
+      padding-right: 30px;
+    }
+
+  }
+
+
+  .hotels{
+
+    &__hotel {
+      grid-column: span 3;
+      position: relative;
+      border-radius: 15px;
+    }
+
+    &__more {
+      left: 43px;
+    }
+
+  }
+
+  .want-tour__wrapper {
+    padding: 0;
+  }
+
+  .search{
+
+    &-box__info {
+      margin-bottom: 20px;
+    }
+
+    &-box__submit {
+      margin: 0 auto;
+    }
+
+    &-box {
+      padding: 25px 20px;
+    }
+
+  }
+
+  .contacts{
+
+    &__wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__info-box:nth-last-child(2) {
+      margin-bottom: 30px;
+    }
+
+
+    &__info {
+      margin-bottom: 30px;
+      margin-right: 0;
+    }
+
+    &__info-button-box {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__info-box {
+      align-items: center;
+    }
+
+  }
+
+
+  .footer__contacts {
+    margin: 0;
+  }
+
+
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  .container{
+    max-width: 540px;
+  }
+
+
+  .header{
+
+    &__phone {
+      display: none;
+    }
+
+    &__lk {
+      margin-left: 0;
+    }
+
+    &__burger{
+      display: block;
+      margin-left: auto;
+    }
+
+    &__bottom {
+      display: block;
+      position: fixed;
+      right: -767px;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 900;
+      background: $color-black-2;
+      padding: 80px 45px;
+      transition: all 0.6s linear;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+
+    &__link {
+      font-size: 35px;
+    }
+
+    &__item {
+      margin-bottom: 35px;
+    }
+
+    &__info-link{
+      width: 300px;
+      text-align: center;
+      margin-bottom: 25px;
+      padding: 20px;
+      font-size: 26px;
+    }
+
+    &__close{
+      display: block;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      z-index: 20;
+      top: 40px;
+      right: 65px;
+    }
+
+    &__close-line{
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #e1e1e1;
+      position: absolute;
+      top: 50%;
+    }
+
+    &__close-line:first-child{
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    &__close-line:last-child{
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &__bottom_active{
+      right: 0px;
+    }
+
+  }
+
+  .tours{
+
+    &__info {
+      bottom: 30px;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__title-big {
+      max-width: 300px;
+      font-size: 60px;
+      line-height: 49px;
+    }
+
+  }
+
+
+  .services{
+
+    &__card {
+      grid-column: span 2;
+    }
+
+    &__card-link {
+      padding-right: 20px;
+    }
+
+  }
+
+
+  .advantages__card {
+    padding: 30px 32px 33px 34px;
+  }
+
+  .about__subtitle {
+    max-width: 484px;
+    font-size: 18px;
+  }
+
+
+  .hotels{
+
+    &__hotel {
+      grid-column: span 6;
+      position: relative;
+      border-radius: 15px;
+    }
+
+    &__pic_small {
+      width: 100%;
+    }
+
+    &__pic_big {
+      width: 100%;
+      height: 500px;
+    }
+
+    &__more {
+      font-size: 28px;
+      padding-right: 20px;
+    }
+
+  }
+
+  .search{
+
+    &-box {
+      flex-direction: column;
+      align-content: space-around;
+    }
+
+    &-box__label {
+      font-size: 18px;
+    }
+
+    &-box__input {
+      font-size: 22px;
+    }
+
+    &-box__submit {
+      padding: 17px 37px;
+      font-size: 22px;
+    }
+
+
+  }
+
+
+  .contacts{
+
+    &__info {
+      margin-right: 0;
+    }
+
+    &__info-subtitle {
+      font-size: 18px;
+    }
+
+    &__info-phone {
+      font-size: 18px;
+    }
+
+    &__info-mail {
+      font-size: 18px;
+    }
+
+    &__info-desc {
+      font-size: 18px;
+    }
+
+    &__info-button {
+      font-size: 20px;
+    }
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+  .container{
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  .header__logo {
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+
+  .header__top {
+    justify-content: center;
+  }
+
+  .tours{
+
+    &__pic {
+      height: 270px;
+    }
+
+    &__pic-big {
+      height: 540px;
+    }
+
+    &__title {
+      font-size: 35px;
+    }
+
+    &__title-big {
+      font-size: 62px;
+      line-height: 1.2;
+    }
+
+    &__title-big {
+      max-width: 300px;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+  }
+
+  .advantages__card {
+    grid-column: span 4;
+  }
+
+  .hotels__more {
+    left: 27px;
+  }
+  .search-box {
+    padding: 40px 20px;
+  }
+  .contacts__pic {
+    height: 315px;
+  }
+
+
+}
+
+@media screen and (max-width: 460px) {
+
+  .sections-title {
+    padding-left: 20px;
+  }
+
+  .tours{
+
+    &__info {
+      bottom: 35px;
+      left: 25px;
+    }
+
+    &__subtitle {
+      margin-bottom: 17px;
+    }
+
+    &__title-big {
+      font-size: 42px;
+      line-height: 1.2;
+    }
+
+    &__pic-big {
+      height: 420px;
+    }
+
+  }
+
+  .contacts__info-button {
+    padding: 20px;
+  }
+
+  .contacts__wrapper {
+    padding: 35px;
+  }
+
+  .hotels__more{
+    display: inline;
+    line-height: 1.2;
+    font-size: 24px;
+  }
+
+  .footer__icons {
+    margin-left: 0;
+  }
+
+}
+
+
+
+@media screen and (max-width: 400px) {
+
+  .tours{
+
+    &__title {
+      font-size: 30px;
+    }
+
+    &__info {
+      bottom: 25px;
+    }
+
+    &__title-big {
+      max-width: 300px;
+      font-size: 40px;
+      line-height: 1.2;
+    }
+
+  }
+
+  .hotels__more {
+    width: 220px;
+    line-height: 1.2;
+  }
+  .contacts__info-text {
+    width: 63%;
+  }
+
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .sections-title {
+    font-size: 30px;
+    padding-left: 20px;
+  }
+
+  .tours__pic-big {
+    height: 385px;
+  }
+
+  .hotels__more {
+    width: 195px;
+    line-height: 1.2;
+  }
+
+  .contacts__info-text {
+    width: 63%;
+  }
+
+  .contacts__info-title {
+    font-size: 18px;
+  }
+
+  .header__link {
+    font-size: 30px;
+    padding: 15px;
+  }
+  .header__info-link {
+    width: 250px;
+    line-height: 1.2;
+    font-size: 26px;
+  }
+
+}
+
+
+
+
